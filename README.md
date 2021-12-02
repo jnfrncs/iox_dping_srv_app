@@ -13,8 +13,11 @@ Copyright 11/2021 Cisco Systems / jpujol@cisco.com
 # How to start it: 
 
 % python iox-dping-srv-app.py 
+
 Bottle v0.12.19 server starting up (using WSGIRefServer())...
+
 Listening on http://0.0.0.0:8011/
+
 Hit Ctrl-C to quit.
 
 # help :
