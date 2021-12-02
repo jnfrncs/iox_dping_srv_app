@@ -2,7 +2,7 @@
 
 Provide a single point of control to initiate calls to iox_c91xx_ping_app running in containers on Cisco C9120-30 APs
 
-(see iox-ping-app project)
+(see iox-ping-app project https://github.com/jnfrncs/iox_c91xx_ping_app)
 
 This application has been written for python3 and can be used on a local machine or embedded into a container package and installed on a Catalyst switch for example.
 Requires bottle and urllib python libraries
