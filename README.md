@@ -8,6 +8,8 @@ Requires bottle and urllib python libraries
 
 Copyright 11/2021 Cisco Systems / jpujol@cisco.com
 
+![iox-dping-srv-app schema](https://your-copied-image-address)
+
 # How to start it: 
 
 % python iox-dping-srv-app.py 
