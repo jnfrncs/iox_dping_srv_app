@@ -18,13 +18,20 @@ Hit Ctrl-C to quit.
 # help :
 curl http://localhost:8011/dping/help
 	
-> help	
+> help
+	
 /dping/help	"This help"
+
 /dping/list	"List APs in the group"
+
 /dping/add/<AP IP@>	"Add an AP (IP@) into the group"
+
 /dping/remove/<AP IP@>	"remove an AP (IP@) from the group"
+
 /dping/target/<target IP@>	"ping target IP@ from all APs in the group"
+
 /dping/target/<target IP@>/size/<packet size>	"ping target IP@ (w/ packet size) from all APs in the group"
+	
 /dping/target/<target IP@>/ttl/<TTL value>	"ping target IP@ (w/ TTL value) from all APs in the group"
   
   # result :
