@@ -42,3 +42,40 @@ curl http://localhost:8011/dping/help
   Result	Result	"[Success]: 172.16.90.9 is 100% reachable from all available APs (pkt size=56 B, TTL=5)"
   score	100
   score	100
+	
+# Creating a docker container :
+	$ docker build -t iox-dping-app .
+	
+	$ docker save iox-dping-app -o iox-dping-app.tar
+	
+# Installing the container to a Cisco Catalyst 9300 :
+	
+	1/ copy the file into the local usb flash :
+	
+	copy sftp://<srv>/iox-dping-app/iox-dping-app.tar usbflash1:
+	
+	2/ configure the network 
+	
+	IOS# configure terminal
+	
+	app-hosting appid ioxdping
+	
+ 	  app-vnic AppGigabitEthernet trunk
+	
+  		vlan <accessvlan> guest-interface 0
+	
+   		  guest-ipaddress <container IP> netmask <container net mask>
+	
+ 	  app-default-gateway <container net defaultgtw> guest-interface 0
+	
+	3/ install and start the container
+	app-hosting install appid ioxdping package usbflash1:iox-dping-app.tar
+	
+	app-hosting activate appid ioxdping
+	
+	app-hosting start appid ioxdping
+
+
+	
+	
+	
