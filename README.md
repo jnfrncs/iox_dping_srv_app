@@ -57,7 +57,9 @@ curl http://localhost:8011/dping/help
 		"avgRtt": 1.29, 
 	
 		"maxRtt": {"val": 2.34, "ap": "172.16.71.196"}
-	}}
+	}
+	
+  }
 	
 # Creating a docker container :
 	$ docker build -t iox-dping-app .
