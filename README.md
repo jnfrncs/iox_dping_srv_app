@@ -43,9 +43,21 @@ curl http://localhost:8011/dping/help
   # result :
   curl http://http://localhost:8011/dping/target/172.16.90.9/ttl/5
   
-  Result	Result	"[Success]: 172.16.90.9 is 100% reachable from all available APs (pkt size=56 B, TTL=5)"
-  score	100
-  score	100
+  {
+	
+	"Result": "[Success]: 10.30.0.20 is 100% reachable from all available APs (pkt size=56 B, TTL=3)", 
+	
+	"score": 100, 
+	
+	"failures": [], 
+	
+	"stats": 
+		{"minRtt": {"val": 0.6, "ap": "172.16.71.196"}, 
+	
+		"avgRtt": 1.29, 
+	
+		"maxRtt": {"val": 2.34, "ap": "172.16.71.196"}
+	}}
 	
 # Creating a docker container :
 	$ docker build -t iox-dping-app .
